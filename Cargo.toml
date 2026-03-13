@@ -4,3 +4,15 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+actix-web = "4.13.0"
+dotenvy = "0.15.7"
+sqlx = { 
+    version = "0.8.6", 
+    features = [
+        "macros", 
+        "postgres", 
+        "runtime-tokio-rustls", 
+        "chrono"
+    ] 
+}
+tokio = { version = "1.50.0", features = ["macros", "rt-multi-thread"] }
