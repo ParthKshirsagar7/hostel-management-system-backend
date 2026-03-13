@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: hostel_db_container
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: hostel_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - hostel_db_data:/var/lib/postgresql/data
+volumes:
+  hostel_db_data:
