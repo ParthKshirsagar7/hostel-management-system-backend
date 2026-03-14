@@ -16,6 +16,7 @@ CREATE TABLE rooms (
     room_name VARCHAR(50) NOT NULL,
     fee DECIMAL(10, 2) NOT NULL,
     deposit DECIMAL(10, 2) NOT NULL,
+    is_available BOOLEAN NOT NULL DEFAULT TRUE,
     UNIQUE(hostel_id, room_name) -- A hostel can't have two "Room 101"s
 );
 

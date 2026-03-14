@@ -1,6 +1,7 @@
 use actix_web::{web, App, HttpServer, HttpResponse, Responder};
 
 mod db;
+mod models;
 
 async fn health_check() -> impl Responder {
     HttpResponse::Ok().body("Server is running")
